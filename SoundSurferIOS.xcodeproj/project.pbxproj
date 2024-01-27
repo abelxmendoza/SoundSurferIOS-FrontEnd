@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DF57F5E2B64D91000B53E0A /* SoundSurferIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */; };
+		2DF57F602B64D91000B53E0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F5F2B64D91000B53E0A /* ContentView.swift */; };
+		2DF57F622B64D91200B53E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF57F612B64D91200B53E0A /* Assets.xcassets */; };
+		2DF57F652B64D91200B53E0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF57F642B64D91200B53E0A /* Preview Assets.xcassets */; };
+		2DF57F6F2B64D91200B53E0A /* SoundSurferIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F6E2B64D91200B53E0A /* SoundSurferIOSTests.swift */; };
+		2DF57F792B64D91200B53E0A /* SoundSurferIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F782B64D91200B53E0A /* SoundSurferIOSUITests.swift */; };
+		2DF57F7B2B64D91200B53E0A /* SoundSurferIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F7A2B64D91200B53E0A /* SoundSurferIOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DF57F6B2B64D91200B53E0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF57F522B64D91000B53E0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DF57F592B64D91000B53E0A;
+			remoteInfo = SoundSurferIOS;
+		};
+		2DF57F752B64D91200B53E0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF57F522B64D91000B53E0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DF57F592B64D91000B53E0A;
+			remoteInfo = SoundSurferIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DF57F5A2B64D91000B53E0A /* SoundSurferIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundSurferIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSurferIOSApp.swift; sourceTree = "<group>"; };
+		2DF57F5F2B64D91000B53E0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DF57F612B64D91200B53E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DF57F642B64D91200B53E0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2DF57F6A2B64D91200B53E0A /* SoundSurferIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundSurferIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF57F6E2B64D91200B53E0A /* SoundSurferIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSurferIOSTests.swift; sourceTree = "<group>"; };
+		2DF57F742B64D91200B53E0A /* SoundSurferIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundSurferIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF57F782B64D91200B53E0A /* SoundSurferIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSurferIOSUITests.swift; sourceTree = "<group>"; };
+		2DF57F7A2B64D91200B53E0A /* SoundSurferIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSurferIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DF57F572B64D91000B53E0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F672B64D91200B53E0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F712B64D91200B53E0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DF57F512B64D91000B53E0A = {
+			isa = PBXGroup;
+			children = (
+				2DF57F5C2B64D91000B53E0A /* SoundSurferIOS */,
+				2DF57F6D2B64D91200B53E0A /* SoundSurferIOSTests */,
+				2DF57F772B64D91200B53E0A /* SoundSurferIOSUITests */,
+				2DF57F5B2B64D91000B53E0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DF57F5B2B64D91000B53E0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DF57F5A2B64D91000B53E0A /* SoundSurferIOS.app */,
+				2DF57F6A2B64D91200B53E0A /* SoundSurferIOSTests.xctest */,
+				2DF57F742B64D91200B53E0A /* SoundSurferIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DF57F5C2B64D91000B53E0A /* SoundSurferIOS */ = {
+			isa = PBXGroup;
+			children = (
+				2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */,
+				2DF57F5F2B64D91000B53E0A /* ContentView.swift */,
+				2DF57F612B64D91200B53E0A /* Assets.xcassets */,
+				2DF57F632B64D91200B53E0A /* Preview Content */,
+			);
+			path = SoundSurferIOS;
+			sourceTree = "<group>";
+		};
+		2DF57F632B64D91200B53E0A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DF57F642B64D91200B53E0A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2DF57F6D2B64D91200B53E0A /* SoundSurferIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF57F6E2B64D91200B53E0A /* SoundSurferIOSTests.swift */,
+			);
+			path = SoundSurferIOSTests;
+			sourceTree = "<group>";
+		};
+		2DF57F772B64D91200B53E0A /* SoundSurferIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF57F782B64D91200B53E0A /* SoundSurferIOSUITests.swift */,
+				2DF57F7A2B64D91200B53E0A /* SoundSurferIOSUITestsLaunchTests.swift */,
+			);
+			path = SoundSurferIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DF57F592B64D91000B53E0A /* SoundSurferIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF57F7E2B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOS" */;
+			buildPhases = (
+				2DF57F562B64D91000B53E0A /* Sources */,
+				2DF57F572B64D91000B53E0A /* Frameworks */,
+				2DF57F582B64D91000B53E0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundSurferIOS;
+			productName = SoundSurferIOS;
+			productReference = 2DF57F5A2B64D91000B53E0A /* SoundSurferIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DF57F692B64D91200B53E0A /* SoundSurferIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF57F812B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOSTests" */;
+			buildPhases = (
+				2DF57F662B64D91200B53E0A /* Sources */,
+				2DF57F672B64D91200B53E0A /* Frameworks */,
+				2DF57F682B64D91200B53E0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DF57F6C2B64D91200B53E0A /* PBXTargetDependency */,
+			);
+			name = SoundSurferIOSTests;
+			productName = SoundSurferIOSTests;
+			productReference = 2DF57F6A2B64D91200B53E0A /* SoundSurferIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DF57F732B64D91200B53E0A /* SoundSurferIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF57F842B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOSUITests" */;
+			buildPhases = (
+				2DF57F702B64D91200B53E0A /* Sources */,
+				2DF57F712B64D91200B53E0A /* Frameworks */,
+				2DF57F722B64D91200B53E0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DF57F762B64D91200B53E0A /* PBXTargetDependency */,
+			);
+			name = SoundSurferIOSUITests;
+			productName = SoundSurferIOSUITests;
+			productReference = 2DF57F742B64D91200B53E0A /* SoundSurferIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DF57F522B64D91000B53E0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2DF57F592B64D91000B53E0A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					2DF57F692B64D91200B53E0A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2DF57F592B64D91000B53E0A;
+					};
+					2DF57F732B64D91200B53E0A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2DF57F592B64D91000B53E0A;
+					};
+				};
+			};
+			buildConfigurationList = 2DF57F552B64D91000B53E0A /* Build configuration list for PBXProject "SoundSurferIOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DF57F512B64D91000B53E0A;
+			productRefGroup = 2DF57F5B2B64D91000B53E0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DF57F592B64D91000B53E0A /* SoundSurferIOS */,
+				2DF57F692B64D91200B53E0A /* SoundSurferIOSTests */,
+				2DF57F732B64D91200B53E0A /* SoundSurferIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DF57F582B64D91000B53E0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF57F652B64D91200B53E0A /* Preview Assets.xcassets in Resources */,
+				2DF57F622B64D91200B53E0A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F682B64D91200B53E0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F722B64D91200B53E0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DF57F562B64D91000B53E0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF57F602B64D91000B53E0A /* ContentView.swift in Sources */,
+				2DF57F5E2B64D91000B53E0A /* SoundSurferIOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F662B64D91200B53E0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF57F6F2B64D91200B53E0A /* SoundSurferIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF57F702B64D91200B53E0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF57F792B64D91200B53E0A /* SoundSurferIOSUITests.swift in Sources */,
+				2DF57F7B2B64D91200B53E0A /* SoundSurferIOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DF57F6C2B64D91200B53E0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DF57F592B64D91000B53E0A /* SoundSurferIOS */;
+			targetProxy = 2DF57F6B2B64D91200B53E0A /* PBXContainerItemProxy */;
+		};
+		2DF57F762B64D91200B53E0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DF57F592B64D91000B53E0A /* SoundSurferIOS */;
+			targetProxy = 2DF57F752B64D91200B53E0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DF57F7C2B64D91200B53E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DF57F7D2B64D91200B53E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DF57F7F2B64D91200B53E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundSurferIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DF57F802B64D91200B53E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundSurferIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DF57F822B64D91200B53E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundSurferIOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundSurferIOS";
+			};
+			name = Debug;
+		};
+		2DF57F832B64D91200B53E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundSurferIOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SoundSurferIOS";
+			};
+			name = Release;
+		};
+		2DF57F852B64D91200B53E0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundSurferIOS;
+			};
+			name = Debug;
+		};
+		2DF57F862B64D91200B53E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YLXNDTC995;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbelMendoza.SoundSurferIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundSurferIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DF57F552B64D91000B53E0A /* Build configuration list for PBXProject "SoundSurferIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF57F7C2B64D91200B53E0A /* Debug */,
+				2DF57F7D2B64D91200B53E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF57F7E2B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF57F7F2B64D91200B53E0A /* Debug */,
+				2DF57F802B64D91200B53E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF57F812B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF57F822B64D91200B53E0A /* Debug */,
+				2DF57F832B64D91200B53E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF57F842B64D91200B53E0A /* Build configuration list for PBXNativeTarget "SoundSurferIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF57F852B64D91200B53E0A /* Debug */,
+				2DF57F862B64D91200B53E0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DF57F522B64D91000B53E0A /* Project object */;
+}
