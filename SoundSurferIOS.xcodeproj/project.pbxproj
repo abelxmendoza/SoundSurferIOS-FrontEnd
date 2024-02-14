@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DD54CC32B7D76250073A6D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC22B7D76250073A6D9 /* LoginView.swift */; };
+		2DD54CC52B7D76680073A6D9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC42B7D76680073A6D9 /* DashboardView.swift */; };
+		2DD54CC72B7D768F0073A6D9 /* SavedSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC62B7D768F0073A6D9 /* SavedSongsView.swift */; };
 		2DF57F5E2B64D91000B53E0A /* SoundSurferIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */; };
 		2DF57F602B64D91000B53E0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF57F5F2B64D91000B53E0A /* ContentView.swift */; };
 		2DF57F622B64D91200B53E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF57F612B64D91200B53E0A /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DD54CC22B7D76250073A6D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2DD54CC42B7D76680073A6D9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2DD54CC62B7D768F0073A6D9 /* SavedSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSongsView.swift; sourceTree = "<group>"; };
 		2DF57F5A2B64D91000B53E0A /* SoundSurferIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundSurferIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSurferIOSApp.swift; sourceTree = "<group>"; };
 		2DF57F5F2B64D91000B53E0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 			children = (
 				2DF57F5D2B64D91000B53E0A /* SoundSurferIOSApp.swift */,
 				2DF57F5F2B64D91000B53E0A /* ContentView.swift */,
+				2DD54CC62B7D768F0073A6D9 /* SavedSongsView.swift */,
+				2DD54CC42B7D76680073A6D9 /* DashboardView.swift */,
+				2DD54CC22B7D76250073A6D9 /* LoginView.swift */,
 				2DF57F612B64D91200B53E0A /* Assets.xcassets */,
 				2DF57F632B64D91200B53E0A /* Preview Content */,
 			);
@@ -257,6 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD54CC72B7D768F0073A6D9 /* SavedSongsView.swift in Sources */,
+				2DD54CC32B7D76250073A6D9 /* LoginView.swift in Sources */,
+				2DD54CC52B7D76680073A6D9 /* DashboardView.swift in Sources */,
 				2DF57F602B64D91000B53E0A /* ContentView.swift in Sources */,
 				2DF57F5E2B64D91000B53E0A /* SoundSurferIOSApp.swift in Sources */,
 			);
