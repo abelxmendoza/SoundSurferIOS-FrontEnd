@@ -1,40 +1,101 @@
+
 import SwiftUI
 
 struct DashboardView: View {
     @State private var songName: String = ""
-    @State private var recommendedSongs: [String] = ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10", "Song 11", "Song 12"]
-
+    @State private var recommendations: [Song] = []  // This will hold the list of recommended songs.
+    @State private var savedSongs: Set<UUID> = []  // Using a Set for efficient lookups
+    
+    // Dummy data for song recommendations
+    let dummySongs = [
+        Song(name: "Song A", artist: "Artist A", albumCover: "AlbumCoverA"),
+        Song(name: "Song B", artist: "Artist B", albumCover: "AlbumCoverB"),
+        // ... add more dummy songs as needed
+    ]
+    
     var body: some View {
-        NavigationView {
+        NavigationView {  // Wrap your content in a NavigationView
             VStack {
-                // Navigation Bar
-                VStack {
-                    Text("Sound Surfer")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding()
-                    TextField("Enter a song name", text: $songName)
-                        .padding()
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, 20)
-                }
-                .background(Color(UIColor.systemBackground))
+                // Navigation Bar Title
+                Text("Sound Surfer")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top, 16)
                 
-                // Dashboard Content
-                Text("Dashboard")
-                    .font(.title)
-                    .padding()
+                Text("Enter a song and get a recommended playlist.")
+                    .font(.subheadline)
+                    .padding(.bottom, 20)
+                
+                // Song Name Input
+                TextField("Enter a song name", text: $songName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal, 24)
+                
+                // Get Recommendations Button
+                Button(action: {
+                    self.recommendations = dummySongs.shuffled()
+                }) {
+                    Text("Get Recommendations")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 24)
+                }
+                
+                // Recommended Playlist Section
+                Text("Recommended Playlist")
+                    .font(.headline)
+                    .padding(.top, 20)
+                
+                // List of recommended songs
+                ScrollView {
+                    ForEach(recommendations) { song in
+                        HStack {
+                            Image(song.albumCover)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .cornerRadius(5)
+                            
+                            VStack(alignment: .leading) {
+                                Text(song.name)
+                                    .font(.headline)
+                                Text(song.artist)
+                                    .font(.subheadline)
+                            }
+                            
+                            Spacer()
+                            
+                            // Heart-shaped like button
+                            Button(action: {
+                                if self.savedSongs.contains(song.id) {
+                                    self.savedSongs.remove(song.id)
+                                } else {
+                                    self.savedSongs.insert(song.id)
+                                }
+                            }) {
+                                Image(systemName: self.savedSongs.contains(song.id) ? "heart.fill" : "heart")
+                                    .foregroundColor(self.savedSongs.contains(song.id) ? .red : .gray)
+                            }
+                        }
+                        .padding(.vertical, 4)
+                    }
+                }
 
-                // Recommended Songs List
-                List(recommendedSongs, id: \.self) { song in
-                    Text(song)
-                        .padding(.vertical, 5)
+                // Navigation Link to SavedSongsView
+                NavigationLink(destination: SavedSongsView(likedSongs: recommendations.filter { savedSongs.contains($0.id) })) {
+                    Text("View Saved Songs")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(8)
                 }
-                .padding(.horizontal, 20)
-                
-                Spacer()
+                .padding(.top, 20)  // Add padding to space it out from the list
             }
-            .navigationBarTitle("Dashboard")
+            .padding(.bottom, 50)
+            .navigationBarTitle("Dashboard", displayMode: .inline)
         }
     }
 }

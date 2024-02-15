@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SavedSongsView: View {
+    var likedSongs: [Song]  // Pass the liked songs into this view
+
     var body: some View {
         VStack {
             Text("Saved Songs")
@@ -8,12 +10,26 @@ struct SavedSongsView: View {
                 .fontWeight(.bold)
                 .padding(.top, 50)
             
-            // Add list of liked songs here
-            // You can use a ScrollView with a ForEach loop to display each song
+            // Use a ScrollView with a ForEach loop to display each song
             ScrollView {
-                ForEach(likedSongs, id: \.id) { song in
-                    // Display song information here
-                    Text("\(song.name) - \(song.artist) - \(song.album)")
+                ForEach(likedSongs) { song in  // No need to specify id: \.id since Song conforms to Identifiable
+                    HStack {
+                        // Assuming you have an image with the same name as `albumCover` in your assets
+                        Image(song.albumCover)
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .cornerRadius(5)
+                        
+                        VStack(alignment: .leading) {
+                            Text(song.name)
+                                .font(.headline)
+                            Text(song.artist)
+                                .font(.subheadline)
+                        }
+                        
+                        Spacer()
+                    }
+                    .padding(.vertical, 4)
                 }
             }
             .padding(.horizontal)
@@ -24,22 +40,13 @@ struct SavedSongsView: View {
 
 struct SavedSongsView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedSongsView()
+        // Provide sample songs for the preview
+        SavedSongsView(likedSongs: [
+            Song(name: "Song 1", artist: "Artist 1", albumCover: "AlbumCover1"),
+            Song(name: "Song 2", artist: "Artist 2", albumCover: "AlbumCover2"),
+            Song(name: "Song 3", artist: "Artist 3", albumCover: "AlbumCover3")
+        ])
     }
 }
 
-// Sample data for liked songs
-let likedSongs = [
-    Song(name: "Song 1", artist: "Artist 1", album: "Album 1"),
-    Song(name: "Song 2", artist: "Artist 2", album: "Album 2"),
-    Song(name: "Song 3", artist: "Artist 3", album: "Album 3")
-]
-
-// Struct to represent a song
-struct Song: Identifiable {
-    let id = UUID()
-    let name: String
-    let artist: String
-    let album: String
-}
 
