@@ -1,12 +1,16 @@
+import SwiftUI
+
 struct ContentView: View {
-    @State private var isLoggedIn: Bool = false
+    @State private var isLoggedIn = false
     
     var body: some View {
         NavigationView {
             if isLoggedIn {
                 DashboardView()
             } else {
-                LoginView(isLoggedIn: $isLoggedIn)
+                LoginView(onLoginSuccess: {
+                    self.isLoggedIn = true
+                })
             }
         }
     }

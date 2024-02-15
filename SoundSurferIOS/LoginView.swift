@@ -3,6 +3,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
+    var onLoginSuccess: () -> Void  // Closure to be called when login is successful
 
     var body: some View {
         VStack {
@@ -26,8 +27,9 @@ struct LoginView: View {
                 .padding(.bottom, 20)
             
             Button(action: {
-                // Add login logic here
-                print("Logging in...")
+                // This is where you would handle the authentication logic.
+                // For now, we'll just call the onLoginSuccess closure to simulate a successful login.
+                onLoginSuccess()
             }) {
                 HStack {
                     Image("spotify-icon") // Use your Spotify icon image here
@@ -50,6 +52,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(onLoginSuccess: {})
     }
 }
+
