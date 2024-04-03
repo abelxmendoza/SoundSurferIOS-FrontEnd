@@ -34,7 +34,6 @@ struct SavedSongsView: View {
             }
             .padding(.horizontal)
         }
-        .background(Color.teal.opacity(0.1))
     }
 }
 

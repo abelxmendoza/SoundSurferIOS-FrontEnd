@@ -1,34 +1,38 @@
+//
+//  SongRowView.swift
+//  SoundSurferIOS
+//
+//  Created by Abel Mendoza on 4/2/24.
+//
+
+
+// SongRowView.swift
 import SwiftUI
 
-struct SongRow: View {
-    let song: Song
+struct SongRowView: View {
+    var song: Song
+    @Binding var isSaved: Bool
 
     var body: some View {
         HStack {
-            Image(song.albumCover)  // Make sure the album cover names match the assets you've added
+            Image(song.albumCover)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
                 .cornerRadius(5)
-
+            
             VStack(alignment: .leading) {
-                Text(song.name)
-                    .font(.headline)
-                Text(song.artist)
-                    .font(.subheadline)
+                Text(song.name).font(.headline)
+                Text(song.artist).font(.subheadline)
             }
-
+            
             Spacer()
+
+            Image(systemName: isSaved ? "heart.fill" : "heart")
+                .foregroundColor(isSaved ? .red : .gray)
         }
-        .padding(.vertical, 4)
+        .padding([.leading, .trailing, .top])
+        
+        .background(Color.customTeal) // Apply the custom teal as a background to the whole view
     }
 }
-
-// Preview for SongRow
-struct SongRow_Previews: PreviewProvider {
-    static var previews: some View {
-        SongRow(song: Song(name: "Sample Song", artist: "Sample Artist", albumCover: "SampleAlbumCover"))
-            .previewLayout(.sizeThatFits)
-    }
-}
-
