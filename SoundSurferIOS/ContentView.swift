@@ -7,12 +7,15 @@ extension Color {
 
 struct ContentView: View {
     @State private var isLoggedIn = false
+    @State private var showingSplash = false  // This is initially false and set to true after login
     @State private var selectedTab = 0
     @State private var savedSongs: Set<UUID> = []  // Shared state for saved songs
 
     var body: some View {
         NavigationView {
-            if isLoggedIn {
+            if showingSplash {
+                SplashScreenView(isActive: $showingSplash)
+            } else if isLoggedIn {
                 // TabView for Dashboard and Liked Songs
                 TabView(selection: $selectedTab) {
                     DashboardView(savedSongs: $savedSongs)  // Pass the Binding to DashboardView
@@ -30,6 +33,10 @@ struct ContentView: View {
             } else {
                 LoginView(onLoginSuccess: {
                     self.isLoggedIn = true
+                    self.showingSplash = true  // Trigger splash screen right after login
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Simulate delay for splash screen
+                        self.showingSplash = false  // Close splash screen
+                    }
                 })
             }
         }
