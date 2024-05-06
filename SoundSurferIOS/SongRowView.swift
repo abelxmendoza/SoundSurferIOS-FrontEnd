@@ -35,7 +35,7 @@ struct SongRowView: View {
             isSaved.toggle()  // Toggle the saved state on tap
         }
         .padding()
-        .background(isSaved ? Color.red.opacity(0.2) : Color.clear)  // Optional: background hint when saved
+        .background(isSaved ? Color.white.opacity(0.2) : Color.clear)  // Optional: background hint when saved
     }
 }
 
