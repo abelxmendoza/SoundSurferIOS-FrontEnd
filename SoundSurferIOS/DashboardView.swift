@@ -52,10 +52,25 @@ struct DashboardView: View {
                           }
                       SongSearchView(songName: $songName)
                       
-                      AttributeToggleView(title: "Use Tempo", isOn: $useTempo)
-                      AttributeToggleView(title: "Use Mood", isOn: $useMood)
-                      AttributeToggleView(title: "Use Energy", isOn: $useEnergy)
-                      AttributeToggleView(title: "Use Danceability", isOn: $useDanceability)
+                      //AttributeToggleView(title: "Use Tempo", isOn: $useTempo)
+                      //AttributeToggleView(title: "Use Mood", isOn: $useMood)
+                      //AttributeToggleView(title: "Use Energy", isOn: $useEnergy)
+                      //AttributeToggleView(title: "Use Danceability", isOn: $useDanceability)
+                      
+                      HStack {
+                                  VStack {
+                                      AttributeToggleView(title: "Use Tempo", isOn: $useTempo)
+                                      AttributeToggleView(title: "Use Mood", isOn: $useMood)
+                                  }
+                                 // .padding(.trailing, 20) // Optional: Adds some space between the two columns
+
+                                  VStack {
+                                      AttributeToggleView(title: "Use Energy", isOn: $useEnergy)
+                                      AttributeToggleView(title: "Use Danceability", isOn: $useDanceability)
+                                  }
+                              }
+                              .padding()  // Add padding around the entire HStack for better spacing from container edges
+                      
                       
                       RecommendationButtonView {
                           self.recommendations = dummySongs.shuffled()
