@@ -1,61 +1,43 @@
 import SwiftUI
 
 struct SavedSongsView: View {
-    var likedSongs: [Song]  // Pass the liked songs into this view
-
+    var likedSongs: [Song]
+    @Binding var savedSongs: Set<UUID> // Use Binding to allow changes to propagate back
+    
     var body: some View {
-        
-        
-        VStack {
-            
-            Text("Saved Songs")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top, 50)
-            
-            // Use a ScrollView with a ForEach loop to display each song
-            ScrollView {
-                ForEach(likedSongs) { song in  // No need to specify id: \.id since Song conforms to Identifiable
-                    HStack {
-                        // Assuming you have an image with the same name as `albumCover` in your assets
-                        Image(song.albumCover)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .cornerRadius(5)
-                        
-                        VStack(alignment: .leading) {
-                            Text(song.name)
-                                .font(.headline)
-                            Text(song.artist)
-                                .font(.subheadline)
-                        }
-                        
-                        Spacer()
+        ZStack {
+            Color.customTeal.edgesIgnoringSafeArea(.all)  // Using your custom teal color for the background
+
+            VStack {
+                Text("Saved Songs")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.top, 20)
+
+                ScrollView {
+                    ForEach(likedSongs) { song in
+                        SongRowView(song: song, isSaved: .constant(savedSongs.contains(song.id)))
+                            .onTapGesture {
+                                if savedSongs.contains(song.id) {
+                                    savedSongs.remove(song.id)
+                                } else {
+                                    savedSongs.insert(song.id)
+                                }
+                            }
+                            .padding(.vertical, 4)
+                            .background(Color.customTeal)  // Applying custom teal background to each row as well
                     }
-                    .padding(.vertical, 4)
                 }
-                
-                
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
-           
         }
-        
-        
     }
-    
-    
 }
 
 struct SavedSongsView_Previews: PreviewProvider {
     static var previews: some View {
-        // Provide sample songs for the preview
-        SavedSongsView(likedSongs: [
-            Song(name: "Song 1", artist: "Artist 1", albumCover: "AlbumCover1"),
-            Song(name: "Song 2", artist: "Artist 2", albumCover: "AlbumCover2"),
-            Song(name: "Song 3", artist: "Artist 3", albumCover: "AlbumCover3")
-        ])
+        SavedSongsView(likedSongs: [Song(name: "Urban Pulse", artist: "City Life", albumCover: "cover1")], savedSongs: .constant(Set()))
     }
 }
-
 

@@ -3,7 +3,8 @@ import SwiftUI
 struct DashboardView: View {
     @State private var songName: String = ""
     @State private var recommendations: [Song] = []
-    @State private var savedSongs: Set<UUID> = []
+    @Binding var savedSongs: Set<UUID>  // Add this line to accept savedSongs
+    //@State private var savedSongs: Set<UUID> = []
     @State private var useTempo: Bool = false
     @State private var useMood: Bool = false
     @State private var useEnergy: Bool = false
@@ -72,6 +73,6 @@ struct DashboardView: View {
 
   struct DashboardView_Previews: PreviewProvider {
       static var previews: some View {
-          DashboardView()
+          DashboardView(savedSongs: .constant(Set()))
       }
   }
