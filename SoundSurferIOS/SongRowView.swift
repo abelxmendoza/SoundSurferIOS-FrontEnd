@@ -29,10 +29,9 @@ struct SongRowView: View {
             Spacer()
 
             Image(systemName: isSaved ? "heart.fill" : "heart")
-                .foregroundColor(isSaved ? .red : .gray)
+                .foregroundColor(isSaved ? .red : .black)
         }
-        .padding([.leading, .trailing, .top])
-        
-        .background(Color.customTeal) // Apply the custom teal as a background to the whole view
+        .padding()
+        .foregroundColor(.white)  // Set text color to white
     }
 }

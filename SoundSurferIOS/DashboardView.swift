@@ -65,7 +65,7 @@ struct DashboardView: View {
               }
               .navigationBarTitle("Dashboard", displayMode: .inline)
               .navigationBarHidden(true)
-              .background(Color.customDarkTeal.edgesIgnoringSafeArea(.all)) // Apply the custom teal as a background to the whole view
+              .background(Color.customTeal.edgesIgnoringSafeArea(.all)) // Apply the custom teal as a background to the whole view
           }
       }
   }

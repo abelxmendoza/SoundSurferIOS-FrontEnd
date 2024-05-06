@@ -16,7 +16,7 @@ struct RecommendationButtonView: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(Color.blue)
+                .background(Color.customDarkTeal)
                 .cornerRadius(10)
         }
         .padding([.leading, .trailing])

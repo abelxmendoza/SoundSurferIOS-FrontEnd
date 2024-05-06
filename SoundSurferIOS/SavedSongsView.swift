@@ -4,7 +4,10 @@ struct SavedSongsView: View {
     var likedSongs: [Song]  // Pass the liked songs into this view
 
     var body: some View {
+        
+        
         VStack {
+            
             Text("Saved Songs")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -31,10 +34,17 @@ struct SavedSongsView: View {
                     }
                     .padding(.vertical, 4)
                 }
+                
+                
             }
             .padding(.horizontal)
+           
         }
+        
+        
     }
+    
+    
 }
 
 struct SavedSongsView_Previews: PreviewProvider {
