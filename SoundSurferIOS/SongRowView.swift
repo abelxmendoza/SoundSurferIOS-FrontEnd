@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SongRowView: View {
     var song: Song
-    @Binding var isSaved: Bool
+    @Binding var isSaved: Bool  // This tells whether the song is saved
 
     var body: some View {
         HStack {
@@ -29,9 +29,13 @@ struct SongRowView: View {
             Spacer()
 
             Image(systemName: isSaved ? "heart.fill" : "heart")
-                .foregroundColor(isSaved ? .red : .black)
+                .foregroundColor(isSaved ? .red : .black)  // Red if saved, black otherwise
+        }
+        .onTapGesture {
+            isSaved.toggle()  // Toggle the saved state on tap
         }
         .padding()
-        .foregroundColor(.white)  // Set text color to white
+        .background(isSaved ? Color.red.opacity(0.2) : Color.clear)  // Optional: background hint when saved
     }
 }
+
