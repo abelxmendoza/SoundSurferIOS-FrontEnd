@@ -59,14 +59,14 @@ struct DashboardView: View {
                       
                       HStack {
                                   VStack {
-                                      AttributeToggleView(title: "Use Tempo", isOn: $useTempo)
-                                      AttributeToggleView(title: "Use Mood", isOn: $useMood)
+                                      AttributeToggleView(title: "Same Tempo", isOn: $useTempo)
+                                      AttributeToggleView(title: "Same Mood", isOn: $useMood)
                                   }
                                  // .padding(.trailing, 20) // Optional: Adds some space between the two columns
 
                                   VStack {
-                                      AttributeToggleView(title: "Use Energy", isOn: $useEnergy)
-                                      AttributeToggleView(title: "Use Danceability", isOn: $useDanceability)
+                                      AttributeToggleView(title: "Same Energy", isOn: $useEnergy)
+                                      AttributeToggleView(title: "Same Genre", isOn: $useDanceability)
                                   }
                               }
                               .padding()  // Add padding around the entire HStack for better spacing from container edges
