@@ -11,18 +11,18 @@ struct DashboardView: View {
     @State private var useDanceability: Bool = false
 
     let dummySongs = [
-        Song(name: "Song A", artist: "Artist A", albumCover: "AlbumCoverA"),
-        Song(name: "Song B", artist: "Artist B", albumCover: "AlbumCoverB"),
-        Song(name: "Epic Journey", artist: "The Wanderers", albumCover: "EpicJourneyCover"),
-        Song(name: "Rising Sun", artist: "Eastern Whispers", albumCover: "RisingSunCover"),
-        Song(name: "Deep Dive", artist: "Ocean Echoes", albumCover: "DeepDiveCover"),
-        Song(name: "Desert Mirage", artist: "Sandy Tracks", albumCover: "DesertMirageCover"),
-        Song(name: "Night Drive", artist: "Neon Dreams", albumCover: "NightDriveCover"),
-        Song(name: "Misty Mountains", artist: "Highland Hymns", albumCover: "MistyMountainsCover"),
-        Song(name: "Urban Pulse", artist: "City Life", albumCover: "UrbanPulseCover"),
-        Song(name: "Country Roads", artist: "Rustic Tunes", albumCover: "CountryRoadsCover"),
-        Song(name: "Retro Vibes", artist: "Vintage Sounds", albumCover: "RetroVibesCover"),
-        Song(name: "Regal Ballad", artist: "Orchestra Infinite", albumCover: "RegalBalladCover"),
+        Song(name: "Song A", artist: "Artist A", albumCover: "9139-Lamb-of-God-Killadelphia-872461540"),
+        Song(name: "Song B", artist: "Artist B", albumCover: "ku"),
+        Song(name: "Epic Journey", artist: "The Wanderers", albumCover: "hypsoad"),
+        Song(name: "Rising Sun", artist: "Eastern Whispers", albumCover: "ku"),
+        Song(name: "Deep Dive", artist: "Ocean Echoes", albumCover: "ku"),
+        Song(name: "Desert Mirage", artist: "Sandy Tracks", albumCover: "ku"),
+        Song(name: "Night Drive", artist: "Neon Dreams", albumCover: "ku"),
+        Song(name: "Misty Mountains", artist: "Highland Hymns", albumCover: "ku"),
+        Song(name: "Urban Pulse", artist: "City Life", albumCover: "hypsoad"),
+        Song(name: "Country Roads", artist: "Rustic Tunes", albumCover: "hypsoad"),
+        Song(name: "Retro Vibes", artist: "Vintage Sounds", albumCover: "hypsoad"),
+        Song(name: "Regal Ballad", artist: "Orchestra Infinite", albumCover: "ku"),
         // ... continue with your pattern
     ]
 
