@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+
+
+
 struct AttributeToggleView: View {
     var title: String
     @Binding var isOn: Bool
 
     var body: some View {
-        Toggle(title, isOn: $isOn).padding([.leading, .trailing])
+        Toggle(title, isOn: $isOn)
+            .toggleStyle(CustomToggleStyle(onColor: .customDarkTeal, offColor: Color.gray.opacity(0.5), thumbColor: Color.white))
+            .padding([.leading, .trailing])
     }
 }

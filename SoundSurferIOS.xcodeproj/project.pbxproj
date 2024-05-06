@@ -12,6 +12,7 @@
 		2D07D20B2BBCE5B30040F5D5 /* RecommendationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07D20A2BBCE5B30040F5D5 /* RecommendationButtonView.swift */; };
 		2D07D20D2BBCE5DD0040F5D5 /* RecommendedPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07D20C2BBCE5DD0040F5D5 /* RecommendedPlaylistView.swift */; };
 		2D07D20F2BBCE6800040F5D5 /* SongRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07D20E2BBCE6800040F5D5 /* SongRowView.swift */; };
+		2D9520E82BE8A2E80063E901 /* CustomToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9520E72BE8A2E80063E901 /* CustomToggleStyle.swift */; };
 		2DD54CC32B7D76250073A6D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC22B7D76250073A6D9 /* LoginView.swift */; };
 		2DD54CC52B7D76680073A6D9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC42B7D76680073A6D9 /* DashboardView.swift */; };
 		2DD54CC72B7D768F0073A6D9 /* SavedSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD54CC62B7D768F0073A6D9 /* SavedSongsView.swift */; };
@@ -48,6 +49,7 @@
 		2D07D20A2BBCE5B30040F5D5 /* RecommendationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationButtonView.swift; sourceTree = "<group>"; };
 		2D07D20C2BBCE5DD0040F5D5 /* RecommendedPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPlaylistView.swift; sourceTree = "<group>"; };
 		2D07D20E2BBCE6800040F5D5 /* SongRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowView.swift; sourceTree = "<group>"; };
+		2D9520E72BE8A2E80063E901 /* CustomToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggleStyle.swift; sourceTree = "<group>"; };
 		2DD54CC22B7D76250073A6D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2DD54CC42B7D76680073A6D9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2DD54CC62B7D768F0073A6D9 /* SavedSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSongsView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				2DD54CC42B7D76680073A6D9 /* DashboardView.swift */,
 				2D07D2062BBCE5630040F5D5 /* AttributeToggleView.swift */,
 				2D07D20A2BBCE5B30040F5D5 /* RecommendationButtonView.swift */,
+				2D9520E72BE8A2E80063E901 /* CustomToggleStyle.swift */,
 				2D07D20E2BBCE6800040F5D5 /* SongRowView.swift */,
 				2D07D20C2BBCE5DD0040F5D5 /* RecommendedPlaylistView.swift */,
 				2DD54CCA2B7DE61C0073A6D9 /* Song.swift */,
@@ -292,6 +295,7 @@
 				2DD54CC52B7D76680073A6D9 /* DashboardView.swift in Sources */,
 				2D07D20F2BBCE6800040F5D5 /* SongRowView.swift in Sources */,
 				2D07D20B2BBCE5B30040F5D5 /* RecommendationButtonView.swift in Sources */,
+				2D9520E82BE8A2E80063E901 /* CustomToggleStyle.swift in Sources */,
 				2DF57F602B64D91000B53E0A /* ContentView.swift in Sources */,
 				2DF57F5E2B64D91000B53E0A /* SoundSurferIOSApp.swift in Sources */,
 				2D07D2052BBCE5210040F5D5 /* SongSearchView.swift in Sources */,
