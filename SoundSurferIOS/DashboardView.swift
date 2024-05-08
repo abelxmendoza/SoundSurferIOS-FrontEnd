@@ -3,12 +3,12 @@ import SwiftUI
 struct DashboardView: View {
     @State private var songName: String = ""
     @State private var recommendations: [Song] = []
-    @Binding var savedSongs: Set<UUID>  // Add this line to accept savedSongs
-    //@State private var savedSongs: Set<UUID> = []
+    @Binding var savedSongs: Set<UUID>
     @State private var useTempo: Bool = false
     @State private var useMood: Bool = false
     @State private var useEnergy: Bool = false
     @State private var useDanceability: Bool = false
+    @State private var recommendationsMade = false
 
     let dummySongs = [
         Song(name: "Song A", artist: "Artist A", albumCover: "9139-Lamb-of-God-Killadelphia-872461540"),
@@ -22,72 +22,94 @@ struct DashboardView: View {
         Song(name: "Urban Pulse", artist: "City Life", albumCover: "hypsoad"),
         Song(name: "Country Roads", artist: "Rustic Tunes", albumCover: "hypsoad"),
         Song(name: "Retro Vibes", artist: "Vintage Sounds", albumCover: "hypsoad"),
-        Song(name: "Regal Ballad", artist: "Orchestra Infinite", albumCover: "ku"),
-        // ... continue with your pattern
+        Song(name: "Regal Ballad", artist: "Orchestra Infinite", albumCover: "ku")
     ]
 
     var body: some View {
-          NavigationView {
-              ScrollView {
-                  VStack(alignment: .leading) {
-                      HStack {
-                              Spacer() // Pushes the content to the center horizontally
-                              Image("soundsurfer2") // Replace with your image name
-                                  .resizable() // Make the image resizable
-                                  .frame(width: 150, height: 150)
-                                  .aspectRatio(contentMode: .fill) // Keep the image aspect ratio
-                                  .clipped() // Clip the image to its bounding frame
-                                  .padding() // Add some padding if needed
-                              Spacer() // Pushes the content to the center horizontally
-                          }
+        ScrollView {
+            VStack(alignment: .leading) {
+                Image("soundsurfer2-transparent")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+                    .padding()
+                    .frame(maxWidth: .infinity)
 
-                      
-                      HStack {
-                              Spacer() // Pushes the content to the center horizontally
-                              Text("Sound Surfer")
-                                  .font(.largeTitle)
-                                  .fontWeight(.bold)
-                                  .padding([.top, .leading, .trailing])
-                              Spacer() // Pushes the content to the center horizontally
-                          }
-                      SongSearchView(songName: $songName)
-                      
-                      //AttributeToggleView(title: "Use Tempo", isOn: $useTempo)
-                      //AttributeToggleView(title: "Use Mood", isOn: $useMood)
-                      //AttributeToggleView(title: "Use Energy", isOn: $useEnergy)
-                      //AttributeToggleView(title: "Use Danceability", isOn: $useDanceability)
-                      
-                      HStack {
-                                  VStack {
-                                      AttributeToggleView(title: "Same Tempo", isOn: $useTempo)
-                                      AttributeToggleView(title: "Same Mood", isOn: $useMood)
-                                  }
-                                 // .padding(.trailing, 20) // Optional: Adds some space between the two columns
+                Text("Sound Surfer")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding([.top, .leading, .trailing])
+                    .frame(maxWidth: .infinity)
 
-                                  VStack {
-                                      AttributeToggleView(title: "Same Energy", isOn: $useEnergy)
-                                      AttributeToggleView(title: "Same Genre", isOn: $useDanceability)
-                                  }
-                              }
-                              .padding()  // Add padding around the entire HStack for better spacing from container edges
-                      
-                      
-                      RecommendationButtonView {
-                          self.recommendations = dummySongs.shuffled()
-                      }
-                      
-                      RecommendedPlaylistView(recommendations: recommendations, savedSongs: $savedSongs)
-                  }
-              }
-              .navigationBarTitle("Dashboard", displayMode: .inline)
-              .navigationBarHidden(true)
-              .background(Color.customTeal.edgesIgnoringSafeArea(.all)) // Apply the custom teal as a background to the whole view
-          }
-      }
-  }
+                SongSearchView(songName: $songName)
 
-  struct DashboardView_Previews: PreviewProvider {
-      static var previews: some View {
-          DashboardView(savedSongs: .constant(Set()))
-      }
-  }
+                HStack {
+                    VStack {
+                        Toggle("Same Tempo", isOn: $useTempo.onChange(updateToggles))
+                            .toggleStyle(CustomToggleStyle(onColor: .green, offColor: .gray, thumbColor: .white))
+                        Toggle("Same Mood", isOn: $useMood.onChange(updateToggles))
+                            .toggleStyle(CustomToggleStyle(onColor: .green, offColor: .gray, thumbColor: .white))
+                    }
+
+                    VStack {
+                        Toggle("Same Energy", isOn: $useEnergy.onChange(updateToggles))
+                            .toggleStyle(CustomToggleStyle(onColor: .green, offColor: .gray, thumbColor: .white))
+                        Toggle("Same Genre", isOn: $useDanceability.onChange(updateToggles))
+                            .toggleStyle(CustomToggleStyle(onColor: .green, offColor: .gray, thumbColor: .white))
+                    }
+                }
+                .padding()
+
+                HStack {
+                    Spacer()
+                    Button(recommendationsMade ? "Clear Recommendations" : "Get Recommendations") {
+                        if recommendationsMade {
+                            recommendations.removeAll()
+                            recommendationsMade = false
+                        } else {
+                            recommendations = dummySongs.shuffled()
+                            recommendationsMade = true
+                        }
+                    }
+                    .padding()
+                    .background(recommendationsMade ? Color.blue : Color.customDarkTeal)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    Spacer()
+                }
+
+                if recommendationsMade {
+                    RecommendedPlaylistView(recommendations: $recommendations, savedSongs: $savedSongs)
+                }
+            }
+        }
+        .background(Color.customTeal.edgesIgnoringSafeArea(.all))
+    }
+
+    private func updateToggles(_ newValue: Bool) {
+        let allToggles = [useTempo, useMood, useEnergy, useDanceability]
+        let activeCount = allToggles.filter({ $0 }).count
+        
+        // If activating this toggle would exceed two active toggles
+        if activeCount > 2 && newValue {
+            if useTempo { useTempo = false }
+            else if useMood { useMood = false }
+            else if useEnergy { useEnergy = false }
+            else if useDanceability { useDanceability = false }
+        }
+    }
+}
+
+extension Binding {
+    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
+        Binding(
+            get: { self.wrappedValue },
+            set: { newValue in
+                self.wrappedValue = newValue
+                handler(newValue)
+            }
+        )
+    }
+}
+

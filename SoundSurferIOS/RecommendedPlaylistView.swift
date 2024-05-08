@@ -10,26 +10,38 @@
 import SwiftUI
 
 struct RecommendedPlaylistView: View {
-    var recommendations: [Song]
+    @Binding var recommendations: [Song]
     @Binding var savedSongs: Set<UUID>
 
     var body: some View {
-        ScrollView {
-            ForEach(recommendations) { song in
-                // Create a custom binding for each song
-                let isSavedBinding = Binding(
-                    get: { self.savedSongs.contains(song.id) },
-                    set: { isSaved in
-                        if isSaved {
-                            self.savedSongs.insert(song.id)
-                        } else {
-                            self.savedSongs.remove(song.id)
+        VStack {
+            ScrollView {
+                ForEach(recommendations.filter { !savedSongs.contains($0.id) }, id: \.id) { song in
+                    let isSavedBinding = Binding(
+                        get: { self.savedSongs.contains(song.id) },
+                        set: { isSaved in
+                            if isSaved {
+                                self.savedSongs.insert(song.id)
+                            } else {
+                                self.savedSongs.remove(song.id)
+                            }
                         }
-                    }
-                )
-
-                SongRowView(song: song, isSaved: isSavedBinding)
+                    )
+                    SongRowView(song: song, isSaved: isSavedBinding)
+                }
             }
+            
+            /*
+             Button("Clear Recommendations") {
+             // Clears the list of recommendations
+             recommendations.removeAll()
+             }
+             .padding()
+             .background(Color.red)
+             .foregroundColor(.white)
+             .cornerRadius(8)
+             
+             */
         }
     }
 }

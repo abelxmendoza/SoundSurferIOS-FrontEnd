@@ -13,16 +13,18 @@ struct SplashScreenView: View {
 
     var body: some View {
         VStack {
+            
             Image("soundsurfer2")  // Your app's logo asset name
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-                .scaleEffect(scale)
-                .onAppear {
-                    withAnimation(.easeIn(duration: 1.5)) {
-                        self.scale = 0.5  // End scale for animation
-                    }
-                }
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())  // Clip the image to a circle
+                        .scaleEffect(scale)
+                        .onAppear {
+                            withAnimation(.easeIn(duration: 1.5)) {
+                                self.scale = 0.5  // End scale for animation
+                            }
+                        }
             
             Text("SoundSurfer")
                 .font(.largeTitle)
