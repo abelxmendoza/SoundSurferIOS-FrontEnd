@@ -2,14 +2,16 @@
 
 ## Overview
 
-SoundSurfer is an innovative iOS application designed to enhance music discovery. Users can enter a song name, apply various filters, and generate a personalized playlist. The app aims to provide a unique, customizable listening experience, allowing users to explore new music that aligns with their preferences.
+SoundSurfer is an innovative iOS application designed to enhance music discovery. Find songs similar to your favorite song. Users can enter a song name, apply various filters, and generate a personalized 12 song playlist. The app aims to provide a unique, customizable listening experience, allowing users to explore new music that aligns with their preferences.
 
 ## Features
 
 - **Song Search**: Users can search for songs by name to start their music discovery journey.
-- **Playlist Generation**: Apply filters to generate a tailored playlist based on the song's features.
-- **Liked Songs**: Users can save their favorite tracks and view them in the LikedSongs View list.
-- **Custom UI**: Features a custom color scheme and logo, enhancing the visual appeal and user experience.
+- **Playlist Generation**: Apply filters such as tempo, mood, energy, and genre to generate a tailored playlist based on the song's features.
+- **Liked Songs**: Users can save their favorite tracks and view them in the LikedSongs View list. Songs can be managed with custom interactions like liking and unliking.
+- **Custom UI**: Features a custom color scheme and logo, enhancing the visual appeal and user experience. Includes a unique toggle style for filter options.
+- **Toggle Management**: Ensures that no more than two filters can be active at the same time to streamline the music discovery process.
+- **Animated Splash Screen**: Features a dynamic splash screen on login, enhancing the initial user experience and providing a smooth transition into the app.
 
 ## Technologies Used
 
@@ -30,22 +32,26 @@ SoundSurfer is an innovative iOS application designed to enhance music discovery
 
 After launching the app, you'll be greeted by the login screen. Use the login functionality to access the main features of the app:
 
-- **Song Search**: Enter the name of a song to see personalized playlist suggestions.
-- **Liked Songs**: Access and manage your list of liked songs from the generated playlists.
+- **Login Screen**: The entry point of the app featuring an animated splash screen.
+
+  <img src="image/README/loginScreenSS.png" width="200" alt="Login Screen">
+- **Dashboard - Before Recommendations**: View the dashboard before generating recommendations.
+
+  <img src="image/README/recSongsBefore.png" width="200" alt="Dashboard Before Recommendations">
+- **Dashboard - After Recommendations**: View the dashboard after recommendations have been generated.
+
+  <img src="image/README/recSongsAfter.png" width="200" alt="Dashboard After Recommendations">
+- **Liked Songs**: Manage your list of liked songs from the generated playlists.
+
+  <img src="image/README/savedSongs.png" width="200" alt="Liked Songs View">
 
 ## Installation
 
-1. **Clone the repository: git clone [https://github.com/abelxmendoza/SoundSurferIOS-FrontEnd.git](https://github.com/abelxmendoza/SoundSurferIOS-FrontEnd.git)**
-
-
-3. **Open the project in Xcode:**
+1. **Clone the repository:
+   `git clone https://github.com/abelxmendoza/SoundSurferIOS-FrontEnd.git`**
+2. **Open the project in Xcode:**
 
 - Navigate to the cloned directory and open the `SoundSurferIOS.xcodeproj` file.
-
-3. **Run the project:**
-
-- Select an iOS simulator or connect a physical iOS device.
-- Hit the `Run` button in Xcode to build and run the app.
 
 3. **Run the project:**
 
@@ -65,11 +71,6 @@ Contributions to SoundSurfer are welcome! Here's how you can contribute:
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-- Abel Mendoza - [Your Contact Information]
-- Project Link: https://github.com/abelxmendoza/SoundSurferIOS-FrontEnd
 
 ## Acknowledgments
 
