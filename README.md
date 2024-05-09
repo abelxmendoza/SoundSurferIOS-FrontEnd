@@ -21,6 +21,16 @@ SoundSurfer is an innovative iOS application designed to enhance music discovery
 - **Xcode**: As the development environment.
 - **GitHub**: For version control and collaboration.
 
+# Developers: Swift Sorcerers
+
+<img src="image/README/swiftSorcerers.png" width="350" height="350" alt="logo">
+
+- Abel Mendoza
+- Akshat Javiya
+- Harry Dinh
+- Matthew Hang
+
+
 ## Getting Started
 
 ### Prerequisites
