@@ -4,6 +4,8 @@
 
 SoundSurfer is an innovative iOS application designed to enhance music discovery. Find songs similar to your favorite song. Users can enter a song name, apply various filters, and generate a personalized 12 song playlist. The app aims to provide a unique, customizable listening experience, allowing users to explore new music that aligns with their preferences.
 
+<img src="image/README/1715227706712.png" width="350" height="350" alt="SoundSurfer Logo">
+
 ## Features
 
 - **Song Search**: Users can search for songs by name to start their music discovery journey.
