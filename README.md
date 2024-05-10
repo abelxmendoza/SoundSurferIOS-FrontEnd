@@ -30,7 +30,6 @@ SoundSurfer is an innovative iOS application designed to enhance music discovery
 - Harry Dinh
 - Matthew Hang
 
-
 ## Getting Started
 
 ### Prerequisites
@@ -83,6 +82,25 @@ Contributions to SoundSurfer are welcome! Here's how you can contribute:
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+
+## Documentation
+
+### Overview
+
+This section provides additional resources that document the development process and demonstrate the functionality of the SoundSurfer iOS app. You'll find links to our video presentation which includes a walkthrough of the app, and our slide deck which outlines the project in detail.
+
+### Video Presentation
+
+Watch our detailed video presentation to see SoundSurfer in action and to understand the thought process behind our design and development choices. The video covers everything from initial design concepts to the final implementation and future development plans.
+
+[Youtube Video Presentation](https://youtu.be/uabpZ_9gjGY)
+
+### Google Slides Presentation
+
+For a more detailed breakdown of the project, including insights into the technical architecture, challenges faced, solutions implemented, and a glimpse into future updates, view our Google Slides presentation.
+
+[Google Slides Presentation](https://docs.google.com/presentation/d/1Zdu8VFeA90NzPOVMjT34gcm4MFY_kKME9NPLPWLm2WM/edit?pli=1#slide=id.p)
 
 ## Acknowledgments
 
